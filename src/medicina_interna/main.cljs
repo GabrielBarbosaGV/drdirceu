@@ -1,8 +1,9 @@
 (ns ^:figwheel-hooks medicina-interna.main
   (:require
-    [reagent.dom :as r.dom]))
+    [reagent.dom :as r.dom]
+    [medicina-interna.views.initial-page :as init]))
 
-(defn app [] [:h1 "Seja bem vindo!"])
+(defn app [] [init/initial-page])
 
 (defn mount []
   (r.dom/render [app] (js/document.getElementById "root")))
